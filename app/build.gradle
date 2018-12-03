@@ -44,5 +44,9 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:2.12"
 
     //kodein
-    implementation 'com.github.salomonbrys.kodein:kodein-android:3.0.0'
+    implementation 'com.github.salomonbrys.kodein:kodein:4.1.0'
+    implementation 'com.github.salomonbrys.kodein:kodein-android:4.1.0'
+
+    //koin
+    implementation 'org.koin:koin-android:0.9.3'
 }

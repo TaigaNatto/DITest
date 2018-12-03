@@ -9,11 +9,12 @@ import javax.inject.Inject
 
 class FirstActivity : AppCompatActivity() {
 
-    private val mBinding:ActivityFirstBinding by lazy {
-        DataBindingUtil.setContentView<ActivityFirstBinding>(this,R.layout.activity_first)
+    private val mBinding: ActivityFirstBinding by lazy {
+        DataBindingUtil.setContentView<ActivityFirstBinding>(this, R.layout.activity_first)
     }
 
-    @Inject lateinit var viewModel: FirstViewModel
+    @Inject
+    lateinit var viewModel: FirstViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +22,6 @@ class FirstActivity : AppCompatActivity() {
 
         (application as App).getComponent().inject(this)
 
-        mBinding.viewModel=viewModel
+        mBinding.viewModel = viewModel
     }
 }

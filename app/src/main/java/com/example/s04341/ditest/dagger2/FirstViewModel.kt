@@ -8,7 +8,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class FirstViewModel @Inject constructor(private val text: String):BaseObservable(){
+class FirstViewModel @Inject constructor(private val text: String) : BaseObservable() {
 
     @Bindable
     fun getText(): String {

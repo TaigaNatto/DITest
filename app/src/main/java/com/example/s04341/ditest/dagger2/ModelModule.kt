@@ -6,10 +6,10 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class ModelModule(private val text:String) {
+class ModelModule(private val text: String) {
     @Singleton
     @Provides
-    fun provideFirstViewModel():FirstViewModel{
+    fun provideFirstViewModel(): FirstViewModel {
         return FirstViewModel(text)
     }
 }

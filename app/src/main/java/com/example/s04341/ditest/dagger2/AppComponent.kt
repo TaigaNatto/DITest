@@ -4,10 +4,12 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(
-    AppModule::class,
-    ModelModule::class)
+@Component(
+    modules = arrayOf(
+        AppModule::class,
+        ModelModule::class
+    )
 )
-interface AppComponent{
+interface AppComponent {
     fun inject(activity: FirstActivity)
 }
