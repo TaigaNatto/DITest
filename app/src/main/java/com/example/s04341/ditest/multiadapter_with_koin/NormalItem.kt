@@ -6,8 +6,7 @@ import android.view.View
 import com.example.s04341.ditest.R
 
 class NormalItem :ItemContract {
-    override fun getView(context: Context): View {
-        val inflater=LayoutInflater.from(context)
-        return inflater.inflate(R.layout.layout_normal,null)
+    override fun getViewResource(): Int {
+        return R.layout.layout_normal
     }
 }

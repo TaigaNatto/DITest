@@ -4,5 +4,5 @@ import android.content.Context
 import android.view.View
 
 interface ItemContract {
-    fun getView(context: Context): View
+    fun getViewResource(): Int
 }
