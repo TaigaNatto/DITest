@@ -20,10 +20,16 @@ class App : Application() {
 
     //ここのインスタンスを変えるだけで抽象元を変えられる
     private val firstRepositoryModule: Module = applicationContext {
-        factory { SecondRepository() as FirstRepositoryContract }
+        factory("first") { FirstRepository() as FirstRepositoryContract }
+        //factory("second") { SecondRepository() as FirstRepositoryContract }
+        factory("second") { null as FirstRepositoryContract }
     }
 
+//    private val secondRepositoryModule: Module = applicationContext {
+//
+//    }
+
     private val firstViewModelModule: Module = applicationContext {
-        factory { FirstViewModel(get()) as FirstViewModelContract }
+        factory { FirstViewModel(get("first")) as FirstViewModelContract }
     }
 }

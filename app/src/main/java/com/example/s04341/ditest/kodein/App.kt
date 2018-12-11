@@ -5,14 +5,8 @@ import com.github.salomonbrys.kodein.*
 
 class App : Application(), KodeinAware {
 
-    val firstRepositoryModule = Kodein.Module {
-        bind<FirstRepository>() with instance(FirstRepository())
-    }
-    val firstViewModelModule = Kodein.Module {
-        bind<FirstViewModel>() with instance(FirstViewModel(FirstRepository()))
-    }
-
     override val kodein:Kodein by Kodein.lazy{
-
+        bind<FirstRepository>() with instance(FirstRepository())
+        bind<FirstViewModel>() with instance(FirstViewModel(instance()))
     }
 }
